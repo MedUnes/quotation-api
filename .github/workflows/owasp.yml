@@ -9,4 +9,4 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install -g @stoplight/spectral-cli
       - run: npm install --save -D @stoplight/spectral-owasp-ruleset
-      - run: spectral lint rfq-api-v1.oas.yml -D error
+      - run: spectral lint -r .owasp-spectral.yaml rfq-api-v1.oas.yml -D error
