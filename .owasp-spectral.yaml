@@ -1,5 +1,3 @@
 extends:
   - spectral:oas
   - "@stoplight/spectral-owasp-ruleset"
-rules:
-  - "owasp:api4:2019-rate-limit": warn
