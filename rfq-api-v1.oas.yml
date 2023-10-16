@@ -7,7 +7,6 @@ servers:
 paths:
   /rfqs:
     post:
-      failure: error
       requestBody:
         content:
           application/json:
