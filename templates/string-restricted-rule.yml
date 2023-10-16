@@ -1,0 +1,14 @@
+  "owasp:api4:2019-string-limit":
+    message: "Schema of type string must specify maxLength!"
+    description: "String size should be limited to mitigate resource exhaustion attacks. This can be done using `maxLength`."
+    severity: error
+    given: '$..[?(@ && @.type=="string")]'
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          anyOf:
+            - required: ["maxLength"]
+            - required: ["enum"]
+            - required: ["const"]

@@ -1,0 +1,20 @@
+name: OpenAPI Checks
+
+on:
+  - pull_request
+
+jobs:
+  Checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '^1.20.3'
+      - run: go install github.com/tufin/oasdiff@latest 
+      - run: |
+          oasdiff -fail-on-diff -check-breaking -base rfq-api-v1-ref.oas.yml -revision rfq-api-v1.oas.yml 
+      - uses: actions/setup-node@v3
+      - run: npm install -g @stoplight/spectral-cli
+      - run: npm install --save -D @stoplight/spectral-owasp-ruleset
+      - run: spectral lint rfq-api-v1.oas.yml -D error

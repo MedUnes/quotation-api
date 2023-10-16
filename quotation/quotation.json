@@ -1,0 +1,8 @@
+{
+    "$schema": "quotation-schema-v1.json",
+    "id": 3141,
+    "product": "Firecracker",
+    "quantity": 40,
+    "price": 3.90,
+    "mode": "express"
+}

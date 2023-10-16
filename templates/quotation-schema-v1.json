@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "product": {
+            "type": "string"
+        },
+        "quantity": {
+            "type": "integer"
+        },
+        "price": {
+            "type": "number"
+        },
+        "shipment": {
+            "type": "string"
+        },
+        "mode": {
+            "type": "string"
+        }
+    }
+}
