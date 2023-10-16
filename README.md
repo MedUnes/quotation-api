@@ -6,4 +6,4 @@ Quotation API
 <h5>A workshop API Berlin wor a quotation API</h3>
 
 
-![Checks](https://img.shields.io/github/workflow/status/medunes/quotation-api/checks?label=Checks)
+[![Open API Checks](https://github.com/MedUnes/quotation-api/actions/workflows/actions.yml/badge.svg)](https://github.com/MedUnes/quotation-api/actions/workflows/actions.yml)
